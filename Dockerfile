@@ -4,8 +4,6 @@ FROM node:alpine as builder
 WORKDIR /app
 COPY package.json .
 #Download and install a dependency
-RUN npm config set proxy http://proxy-chain.intel.com:911
-RUN npm config set https-proxy http://proxy-chain.intel.com:911
 RUN npm install
 #Copy files
 COPY . .
